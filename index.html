@@ -1,72 +1,580 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Linktree Alternative</title>
-    <link rel="stylesheet" href="styles.css">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Base olimpiade</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="css/freelancer.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
 </head>
-<body>
+
+<body id="page-top" class="index">
+
+    <!-- Navigation -->
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="#page-top">Base Olimpiade</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#portfolio">Event</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#about">About</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!-- Header -->
     <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <img class="img-responsive" src="data:image/jpeg;base64,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"">
+                    <div class="intro-text">
+                        <span class="name">Base Olimpiade</span>
+                        <hr class="star-light">
+                        <span class="skills"> </span>:Oleh <br/>Pusat Olimpiade - Puskanas - Prestasi Pelajar</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
-    <main>
-        <section id="home">
-            <h1>Selamat Datang di websites olimpiade</h1>
-      <p>Websites ini hanya menyediakan informasi yang telah didaftarkan oleh pihak developer, Hubungi developer jika adanya kesalahan data.</p>
-      <div class="image-container">
-        <img src="image/putria.jpg" alt="Image 1" class="touchable" data-href="https://www.example.com">
-        <p>PUTRIA INTAN AZ-ZAHRA</p>
-        <div class="info-container">
-			<p>Nama Gambar 1</p> 
-			<table>
-			  <tr>
-				<th>Mapel</th>
-				<th>Waktu</th>
-			  </tr>
-			  <tr>
-				<td>Matematika</td>
-				<td>Senin, 10:00 - 12:00</td>
-			  </tr>
-			</table>
-      </div>
-      <div class="image-container">
-        <img src="image/amel.jpg" alt="Image 2" class="touchable" data-href="https://www.example.net">
-        <p>NANDA FITRI AMELIA</p>
-        <div class="info-container">
-			<p>Nama Gambar 1</p> 
-			<table>
-			  <tr>
-				<th>Mapel</th>
-				<th>Waktu</th>
-			  </tr>
-			  <tr>
-				<td>Matematika</td>
-				<td>Senin, 10:00 - 12:00</td>
-			  </tr>
-			</table>
-      </div>
-      <div class="image-container">
-        <img src="image3.jpg" alt="Image 3" class="touchable" data-href="https://www.example.io">
-        <p>Nama Gambar 3</p>
-      </div>
-        </section
-		<section id="about">
-            <h1>About me</h1>
-            <p>This is a brief bio about me and my interests.</p>
-        </section>
-        <section id="contact">
-            <h1>Get in touch</h1>
-            <p>This is a contact form that allows you to get in touch with me.</p>
-        </section>
-    </main>
-    <script src="script.js"></script>
+
+    <!-- Portfolio Grid Section -->
+    <section id="portfolio">
+        <div class="container">
+            <!-- /Event 1 -->
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Event</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4 portfolio-item">
+                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="https://instagram.fsub13-1.fna.fbcdn.net/v/t39.30808-6/460498056_18005277302643528_1196275204706410896_n.webp?stp=dst-webp_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xMDgweDEwODAuc2RyLmYzMDgwOC5kZWZhdWx0X2ltYWdlIn0&_nc_ht=instagram.fsub13-1.fna.fbcdn.net&_nc_cat=100&_nc_ohc=hXzZhiURp7EQ7kNvgEUb4rG&_nc_gid=117994bc6a074a4d96786eca66932c58&edm=AA5fTDYAAAAA&ccb=7-5&ig_cache_key=MzQ1OTY5ODY1OTIxMzQ0MTE1NA%3D%3D.3-ccb7-5&oh=00_AYCqEeLTStN0eFymIdWMpxLKQqzN2JGa2bjUqEBwRqiwQA&oe=67009C8C&_nc_sid=7edfe2" class="img-responsive" alt="">
+                    </a>
+                </div>
+                <!-- /event 2 -->
+                <div class="col-sm-4 portfolio-item">
+                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="https://instagram.fsub13-1.fna.fbcdn.net/v/t39.30808-6/461428478_18006282767643528_3152126921381828536_n.webp?stp=dst-webp_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xMDgweDEwODAuc2RyLmYzMDgwOC5kZWZhdWx0X2ltYWdlIn0&_nc_ht=instagram.fsub13-1.fna.fbcdn.net&_nc_cat=100&_nc_ohc=5G9YMfsIMeAQ7kNvgHlIgpG&_nc_gid=117994bc6a074a4d96786eca66932c58&edm=AA5fTDYAAAAA&ccb=7-5&ig_cache_key=MzQ2NTUyMTYzMDg4NDQ0Njk2MA%3D%3D.3-ccb7-5&oh=00_AYCGv9z_fBPpqpnxZvc2-X9g5AJkLVvfUWkg2yTAsAsJkg&oe=67009679&_nc_sid=7edfe2" class="img-responsive" alt="">
+                    </a>
+                </div>
+                <!-- /Event 3 -->
+                <div class="col-sm-4 portfolio-item">
+                    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="https://instagram.fsub13-1.fna.fbcdn.net/v/t39.30808-6/460943026_18005908652643528_5529240275285550166_n.webp?stp=dst-webp_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xMDgweDEwODAuc2RyLmYzMDgwOC5kZWZhdWx0X2ltYWdlIn0&_nc_ht=instagram.fsub13-1.fna.fbcdn.net&_nc_cat=100&_nc_ohc=LQp-hvQKEvQQ7kNvgHfwvCG&_nc_gid=117994bc6a074a4d96786eca66932c58&edm=AA5fTDYAAAAA&ccb=7-5&ig_cache_key=MzQ2MzI5NjE0MjE0OTU3ODI0NQ%3D%3D.3-ccb7-5&oh=00_AYCA82k2I_6dZY38oUaYsCaTlXDHkLMOmvYsR4j6fBrL_A&oe=670093FE&_nc_sid=7edfe2" class="img-responsive" alt="">
+                    </a>
+                </div>
+                <!-- /Event 4 -->
+                <!-- /div class="col-sm-4 portfolio-item">
+                    <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/game.png" class="img-responsive" alt="">
+                    </a>
+                </div>
+               <!-- /Event 5 -->
+                <!--div class="col-sm-4 portfolio-item">
+                    <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/safe.png" class="img-responsive" alt="">
+                    </a>
+                </div>
+               <!-- /Event 6 -->
+                <!--div class="col-sm-4 portfolio-item">
+                    <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/submarine.png" class="img-responsive" alt="">
+                    </a>
+                </div>
+            </div-->
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="success" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>About</h2>
+                    <hr class="star-light">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-lg-offset-2">
+                    <p>Kami adalah siswa/Siswi alumni MTsN 15 Jombang angkatan 2024 yang hobby mengikuti olimpiade online yang ada di intagram untuk menambah wawasan belajar kita.</p>
+                </div>
+                <div class="col-lg-4">
+                    <p>Kami menyukai olimpiade online di Instagram karena memberikan kesempatan untuk berkompetisi dan belajar bersama teman-teman alumni MTsN 15 Jombang, sekaligus memperluas wawasan dan mempererat silaturahmi.</p>
+                </div>
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <!-- <a href="#" class="btn btn-lg btn-outline">
+                        <i class="fa fa-download"></i> Download Theme
+                    </a> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="footer-above">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col col-md-4">
+                        <h3>PERWAKILAN UNIT</h3>
+                        <p><a href="https://izhardevelop.github.io/putria/">SMK 2 Jombang</a>.</p>
+                        <p><a href="https://izhardevelop.github.io/putria/abul.html">SMK Telekomunikasi Darul Ulum</a>.</p>
+                        <p><a href="https://izhardevelop.github.io/putria/amel.html">SMA 1 PGRI Jombang</a>.</p>
+                        <p><a href="https://izhardevelop.github.io/putria/syta.html">MAN 2 Jombang</a>.</p>
+                    </div>
+                    <div class="footer-col col-md-4">
+                        <h3>Contact</h3>
+                        <ul class="list-inline">
+                            <li>
+                                <a href="https://wa.me/625852536578" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/IzharDevelop" class="btn-social btn-outline"><i class="fa fa-fw fa-github"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/_santri_jombang/" class="btn-social btn-outline"><i class="fa fa-fw fa-instagram"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-col col-md-4">
+                        <h3>Izhar Nation</h3>
+                        <p><a href="https://wa.me/6285852536578">Izhar Nation</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-below">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        Copyright &copy; Izhar Nation, Jombang  2024
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-top page-scroll hidden-sm hidden-xs hidden-lg hidden-md">
+        <a class="btn btn-primary" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>
+
+    <!-- Portfolio Modals -->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>🏆STUDENT SCIENCE OLYMPIAD 2.0🏆<h2>
+                            <hr class="star-primary">
+                            <img src="https://instagram.fsub13-1.fna.fbcdn.net/v/t39.30808-6/460498056_18005277302643528_1196275204706410896_n.webp?stp=dst-webp_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xMDgweDEwODAuc2RyLmYzMDgwOC5kZWZhdWx0X2ltYWdlIn0&_nc_ht=instagram.fsub13-1.fna.fbcdn.net&_nc_cat=100&_nc_ohc=hXzZhiURp7EQ7kNvgEUb4rG&_nc_gid=117994bc6a074a4d96786eca66932c58&edm=AA5fTDYAAAAA&ccb=7-5&ig_cache_key=MzQ1OTY5ODY1OTIxMzQ0MTE1NA%3D%3D.3-ccb7-5&oh=00_AYCqEeLTStN0eFymIdWMpxLKQqzN2JGa2bjUqEBwRqiwQA&oe=67009C8C&_nc_sid=7edfe2" class="img-responsive img-centered" alt="">
+                            <P>🏆STUDENT SCIENCE OLYMPIAD 2.0🏆
+<br>
+                                Tingkat SD/MI Sederajat, SMP/MTs Sederajat, SMA/SMK/MA Sederajat
+                                <br>
+                                Biaya Pendaftaran :<br>
+                                a. PREMIUM (Tanpa Syarat dan ketentuan ) Rp 95,000<br>
+                                b. GRATISSS dengan syarat dan ketentuan<br>
+                                <br>
+                                Syarat dan Ketentuan :<br>
+                                1. Follow @saintech.id & @bimacompetition @beritaolimpiade @pusatolimpiade @seputar.olimpiade
+                                <br>2.Mention Teman kamu min 7 orang di kolom komentar
+                                <br>3. Share postingan ini ke 3 group belajar kamu, WA,FB, Telegram dll
+                                <br>4. Upload seluruh bukti persyaratan ke https://www.saintech.my.id/event/ssodua (link ada di bio IG @saintech.id dan @bimacompetition)
+                                <br>5. Panduan teknis terkait pelaksanaan SSO 2.0 dapat dilihat di https://bit.ly/saintechsso2
+                                <br>6. Pasang twibbon SSO 2.0 di instagram kamu melalui link https://twb.nz/ssoduaa dan tag ig @saintech.id & @bimacompetition
+                                <br>
+                                Fasilitas :
+                                <br>- Medali
+                                <br>- Sertifikat
+                                <br>- Soal dan Kunci
+                                <br>- Relasi Nasional
+                                <br>- Evaluasi
+                                <br>- Pengembangan diri
+                                <br>
+                                📌 Pelaksanaan SSO : 13 OKTOBER 2024
+                                <br>
+                                #sso
+                                #ksn2024
+                                #kompetisisainsindonesia
+                                #saintech
+                                #olimpiadesd
+                                #olimpiadesmp
+                                #olimpiadensma
+                                #olimpiademahasiswa
+                                #olimpiadesains
+                                #olimpiadesainsnasional</P>
+                            <ul class="list-inline item-details">
+                                <li>Client:
+                                    <strong><a href="http://startbootstrap.com">Pusat Olimpiade</a>
+                                    </strong>
+                                </li>
+                                <li>Date:
+                                    <strong><a href="http://startbootstrap.com">November 2024</a>
+                                    </strong>
+                                </li>
+                                <li>Service:
+                                    <strong><a href="http://startbootstrap.com">Izhar Nation</a>
+                                    </strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>🏆🥉(NATIONAL SCIENCE COMPETITION 3.0)🎖🏆</h2>
+                            <hr class="star-primary">
+                            <img src="https://instagram.fsub13-1.fna.fbcdn.net/v/t39.30808-6/461428478_18006282767643528_3152126921381828536_n.webp?stp=dst-webp_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xMDgweDEwODAuc2RyLmYzMDgwOC5kZWZhdWx0X2ltYWdlIn0&_nc_ht=instagram.fsub13-1.fna.fbcdn.net&_nc_cat=100&_nc_ohc=5G9YMfsIMeAQ7kNvgHlIgpG&_nc_gid=117994bc6a074a4d96786eca66932c58&edm=AA5fTDYAAAAA&ccb=7-5&ig_cache_key=MzQ2NTUyMTYzMDg4NDQ0Njk2MA%3D%3D.3-ccb7-5&oh=00_AYCGv9z_fBPpqpnxZvc2-X9g5AJkLVvfUWkg2yTAsAsJkg&oe=67009679&_nc_sid=7edfe2" class="img-responsive img-centered" alt="">
+                            <p>🏆🥉(NATIONAL SCIENCE COMPETITION 3.0)🎖🏆<br>
+
+                                Tingkat SMP/MTs Sederajat dan SMA/MA/SMK Sederajat<br>
+                                
+                                Biaya Pendaftaran :<br>
+                                a. PREMIUM (Tanpa Syarat dan ketentuan ) Rp 90,000<br>
+                                b. GRATISSS dengan syarat dan ketentuan<br>
+                                
+                                Syarat dan Ketentuan :<br>
+                                1. Share postingan ini ke Story IG dan WA kamu<br>
+                                2. Share postingan ini ke 7 group belajar kamu, WA, FB, Telegram, dll<br>
+                                3. Mention Teman kamu min 10 orang di kolom komentar<br>
+                                4. Follow ig @gantari.competition, @garudasainsindonesia, @pusatolimpiade @olimpiadesainsnasional dan @berita_olimpiade
+                                <br>5. Upload seluruh bukti persyaratan ke https://www.gantaricompetition.my.id/event/nsctiga (link ada di bio IG @gantari.competition)
+                                <br>6. Informasi selengkapnya mengenai jadwal, penilaian, kisi-kisi dll silahkan download juknis disini https://bit.ly/gantarinsc3
+                                <br>7. Pakai twibbon NSC https://twb.nz/nsctiga dan share ke medsos tag ig @gantari.competition @garudasainsindonesia
+                                <br>
+                                Fasilitas :
+                                <br>- Medali
+                                <br>- Sertifikat
+                                <br>- Soal dan Kunci
+                                <br>- Relasi Nasional
+                                -<br> Evaluasi Pengembangan diri
+                                
+                                <br>🔺Pelaksanaan : 05 OKTOBER 2024
+                                
+                                #nsc
+                                #nsc2024
+                                #olimpiade2024
+                                #olimpiadenasional
+                                #olimpiadepelajar
+                                #olimpiadsiswa
+                                #olimpiadesma
+                                #olimpiadesmp
+                                #olimpiadeindonesia </p>
+                            <ul class="list-inline item-details">
+                                <li>Client:
+                                    <strong><a href="http://startbootstrap.com">gantaricompetition
+                                    </strong>
+                                </li>
+                                <li>Date:
+                                    <strong><a href="http://startbootstrap.com">November 2024</a>
+                                    </strong>
+                                </li>
+                                <li>Service:
+                                    <strong><a href="http://startbootstrap.com">Izhar Nation</a>
+                                    </strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Progaming</h2>
+                            <hr class="star-primary">
+                            <img src="https://instagram.fsub13-1.fna.fbcdn.net/v/t39.30808-6/460943026_18005908652643528_5529240275285550166_n.webp?stp=dst-webp_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xMDgweDEwODAuc2RyLmYzMDgwOC5kZWZhdWx0X2ltYWdlIn0&_nc_ht=instagram.fsub13-1.fna.fbcdn.net&_nc_cat=100&_nc_ohc=LQp-hvQKEvQQ7kNvgHfwvCG&_nc_gid=117994bc6a074a4d96786eca66932c58&edm=AA5fTDYAAAAA&ccb=7-5&ig_cache_key=MzQ2MzI5NjE0MjE0OTU3ODI0NQ%3D%3D.3-ccb7-5&oh=00_AYCA82k2I_6dZY38oUaYsCaTlXDHkLMOmvYsR4j6fBrL_A&oe=670093FE&_nc_sid=7edfe2" class="img-responsive img-centered" alt="">
+                            <p>INDONESIA SCIENCE COMPETITION ZETA 2.0 🤩🤩🔥 <br>
+                                <br>====================
+                                <br>
+                                Tingkat SMA/MA/SMK Sederajat dan SMP/MTs Sederajat
+                                
+                                <br>Biaya Pendaftaran :
+                                <br>a. PREMIUM (Tanpa Syarat dan ketentuan ) Rp 90,000
+                                <br>b. GRATISSS dengan syarat dan ketentuan
+                                
+                                <br>Syarat dan Ketentuan :
+                                <br>1. Share postingan ini ke story IG dan WA kamu
+                                <br>2. Share postingan ini ke 7 group belajar kamu, WA,FB, Telegram dll
+                                <br>3. Tag teman kamu min 10 orang di kolom komentar
+                                <br>4. Follow @pythagoras_institute @zetainstitute @olympiaddltn @pusatolimpiade @seputar.olimpiade
+                                <br>5. Bukti pakai twibbon Zeta Science Olympiad dan share ke media sosial kamu lalu tag @pythagoras_institute @zetainstitute @olympiaddltn
+                                <br>6. Upload seluruh bukti persyaratan ke https://www.olimpiadedltn.my.id/event/isczdua (link ada di bio IG @zetainstitute )
+                                
+                                <br>Fasilitas :
+                                <br>- Medali
+                                <br>- Sertifikat
+                                <br>- Soal dan Kunci
+                                <br>- Relasi Nasional
+                                <br>- Evaluasi Pengembangan diri
+                                
+                                <br>🔺Pelaksanaan 19 Oktober 2024
+                                <br>
+                                #ISCZ
+                                #kompetisisainsbiologi
+                                #kompetisisainsnasional
+                                #olimpiadeipa
+                                #kompetisinasional
+                                #olimpiadenasional
+                                #olimpiadebah
+                                </p>
+                            <ul class="list-inline item-details">
+                                <li>Client:
+                                    <strong><a href="http://startbootstrap.com">Dalton</a>
+                                    </strong>
+                                </li>
+                                <li>Date:
+                                    <strong><a href="http://startbootstrap.com">November 2024</a>
+                                    </strong>
+                                </li>
+                                <li>Service:
+                                    <strong><a href="http://startbootstrap.com">Izhar Nation</a>
+                                    </strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Editor Videos</h2>
+                            <hr class="star-primary">
+                            <img src="img/portfolio/game.png" class="img-responsive img-centered" alt="">
+                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
+                            <ul class="list-inline item-details">
+                                <li>Client:
+                                    <strong><a href="http://startbootstrap.com">MTsN 15 Jombang</a>
+                                    </strong>
+                                </li>
+                                <li>Date:
+                                    <strong><a href="http://startbootstrap.com">April 2024</a>
+                                    </strong>
+                                </li>
+                                <li>Service:
+                                    <strong><a href="http://startbootstrap.com">Izhar Nation</a>
+                                    </strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Editor Photos</h2>
+                            <hr class="star-primary">
+                            <img src="img/portfolio/safe.png" class="img-responsive img-centered" alt="">
+                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
+                            <ul class="list-inline item-details">
+                                <li>Client:
+                                    <strong><a href="http://startbootstrap.com">MTsN 15 Jombang</a>
+                                    </strong>
+                                </li>
+                                <li>Date:
+                                    <strong><a href="http://startbootstrap.com">April 2024</a>
+                                    </strong>
+                                </li>
+                                <li>Service:
+                                    <strong><a href="http://startbootstrap.com">Izhar Nation</a>
+                                    </strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Service</h2>
+                            <hr class="star-primary">
+                            <img src="img/portfolio/submarine.png" class="img-responsive img-centered" alt="">
+                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
+                            <ul class="list-inline item-details">
+                                <li>Client:
+                                    <strong><a href="http://startbootstrap.com">User</a>
+                                    </strong>
+                                </li>
+                                <li>Date:
+                                    <strong><a href="http://startbootstrap.com">April 2024</a>
+                                    </strong>
+                                </li>
+                                <li>Service:
+                                    <strong><a href="http://startbootstrap.com">Izhar Nation</a>
+                                    </strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="js/freelancer.min.js"></script>
+
 </body>
+
 </html>
