@@ -1,0 +1,145 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000;/* Warna latar belakang */
+    color: #fff;
+}
+
+header {
+    background-color: #673AB7; /* Contoh warna primer */
+    color: #fff;
+    padding: 2em;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin: 0 15px; /* Jarak antar menu */
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease; /* Efek transisi halus */
+}
+
+nav a:hover {
+    color: #FFC107;  /* Contoh warna sekunder */
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+}
+
+section {
+    background-color: #fff;
+    padding: 2em;
+    margin-bottom: 20px;
+    border-radius: 8px; /* Sudut membulat */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Bayangan halus */
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Styling untuk tombol */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FFC107; /* Contoh warna sekunder */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #FFA000; /* Warna lebih gelap saat dihover */
+}
+
+/* styles.css */
+.touchable {
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    max-width: 10%; /* Gambar tidak akan melebihi lebar parent */
+    height: auto; /* Tinggi akan menyesuaikan secara proporsional */
+}
+
+.touchable:hover {
+    opacity: 0.8;
+}
+
+.image-container {
+    text-align: center; 
+    margin-bottom: 40px; /* Beri jarak antar container */
+    opacity: 100; /* Atur opacity awal menjadi 0 untuk animasi */
+    transform: translateY(100px); /* Geser elemen ke bawah 100px */
+  }
+   
+  
+  .image-container img { 
+    display: block;  
+    margin: 0 auto; 
+    border: 1px solid #ddd; 
+    border-radius: 8px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .image-container table {
+    margin-top: 10px; 
+    border-collapse: collapse; 
+    width: auto; /* Ubah width menjadi auto */
+  }
+  
+  .image-container table {
+    margin: 0 auto; /* Pusatkan tabel secara horizontal */
+    margin-top: 10px; 
+    border-collapse: collapse; 
+    width: auto;
+  }
+  
+  .image-container th {
+    background-color: #f0f0f0; /* Memberi warna latar belakang pada header tabel */
+  }
+  /* styles.css */
+.image-container table {
+    margin-top: 10px; /* Memberi jarak antara gambar dan tabel */
+    border-collapse: collapse; /* Menghilangkan jarak antar sel */
+    width: 100%; /* Membuat tabel memakan lebar penuh container */
+    background-color: #fff; /* Atur warna latar belakang tabel */
+  }
+  
+  .image-container th, .image-container td {
+    border: 1px solid #000; /* Memberi border pada sel */
+    padding: 10px; /* Memberi jarak antar konten dan border */
+    text-align: left; /* Membuat teks rata kiri */
+    background-color: #fff; /* Atur warna latar belakang sel */
+    color: #000; /* Atur warna teks */
+  }
+  
+  .image-container th {
+    background-color: #000; /* Atur warna latar belakang header tabel */
+    color: #fff; /* Atur warna teks header tabel */
+  }
